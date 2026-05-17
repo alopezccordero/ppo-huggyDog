@@ -1,0 +1,17 @@
+torch==2.2.2
+stable-baselines3==2.3.2
+gymnasium==0.29.1
+
+mlagents==0.30.0
+mlagents-envs==0.30.0
+
+huggingface_hub
+huggingface_sb3
+
+tensorboard
+moviepy
+matplotlib
+numpy==1.26.4
+pandas
+tqdm
+opencv-python
