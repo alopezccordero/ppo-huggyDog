@@ -7,7 +7,7 @@ huggingface_sb3
 tensorboard
 moviepy
 matplotlib
-numpy==1.23.5
+numpy==1.21.2
 pandas
 tqdm
 opencv-python
