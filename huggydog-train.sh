@@ -17,10 +17,13 @@ echo "Python"
 which python
 python --version
 
+echo "go into the ml-agents folder"
+cd ~/ppo-huggyDog/ml-agents
+
 echo "Starting huggydog training"
 
 mlagents-learn ./config/ppo/Huggy.yaml \
-    --env=./Huggy \
+    --env=./trained-envs-executables/linux/Huggy/Huggy \
     --run-id=huggy-ppo-run-1 \
     --train \
     --no-graphics
