@@ -1,0 +1,41 @@
+CUDA_VISIBLE_DEVICES: 0
+Python
+/home/alejandrolopezcordero01/miniconda3/envs/huggy-rl/bin/python
+Python 3.10.7
+go into the ml-agents folder
+Starting huggydog training
+
+            ┐  ╖
+        ╓╖╬│╡  ││╬╖╖
+    ╓╖╬│││││┘  ╬│││││╬╖
+ ╖╬│││││╬╜        ╙╬│││││╖╖                               ╗╗╗
+ ╬╬╬╬╖││╦╖        ╖╬││╗╣╣╣╬      ╟╣╣╬    ╟╣╣╣             ╜╜╜  ╟╣╣
+ ╬╬╬╬╬╬╬╬╖│╬╖╖╓╬╪│╓╣╣╣╣╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╒╣╣╖╗╣╣╣╗   ╣╣╣ ╣╣╣╣╣╣ ╟╣╣╖   ╣╣╣
+ ╬╬╬╬┐  ╙╬╬╬╬│╓╣╣╣╝╜  ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╣╙ ╙╣╣╣  ╣╣╣ ╙╟╣╣╜╙  ╫╣╣  ╟╣╣
+ ╬╬╬╬┐     ╙╬╬╣╣      ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣     ╣╣╣┌╣╣╜
+ ╬╬╬╜       ╬╬╣╣      ╙╝╣╣╬      ╙╣╣╣╗╖╓╗╣╣╣╜ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣╦╓    ╣╣╣╣╣
+ ╙   ╓╦╖    ╬╬╣╣   ╓╗╗╖            ╙╝╣╣╣╣╝╜   ╘╝╝╜   ╝╝╝  ╝╝╝   ╙╣╣╣    ╟╣╣╣
+   ╩╬╬╬╬╬╬╦╦╬╬╣╣╗╣╣╣╣╣╣╣╝                                             ╫╣╣╣╣
+      ╙╬╬╬╬╬╬╬╣╣╣╣╣╣╝╜
+          ╙╬╬╬╣╣╣╜
+             ╙
+        
+ Version information:
+  ml-agents: 0.30.0,
+  ml-agents-envs: 0.30.0,
+  Communicator API: 1.5.0,
+  PyTorch: 1.11.0+cu102
+[WARNING] The --train option has been deprecated. Train mode is now the default. Use --inference to run in inference mode.
+Traceback (most recent call last):
+  File "/home/alejandrolopezcordero01/miniconda3/envs/huggy-rl/bin/mlagents-learn", line 6, in <module>
+    sys.exit(main())
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/learn.py", line 264, in main
+    run_cli(parse_command_line())
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/learn.py", line 260, in run_cli
+    run_training(run_seed, options, num_areas)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/learn.py", line 75, in run_training
+    validate_existing_directories(
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/directory_utils.py", line 25, in validate_existing_directories
+    raise UnityTrainerException(
+mlagents.trainers.exception.UnityTrainerException: Previous data from this run ID was found. Either specify a new run ID, use --resume to resume this run, or use the --force parameter to overwrite existing data.
+training finished

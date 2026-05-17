@@ -1,0 +1,59 @@
+CUDA_VISIBLE_DEVICES: 0
+Python
+/home/alejandrolopezcordero01/miniconda3/envs/huggy-rl/bin/python
+Python 3.10.7
+go into the ml-agents folder
+Starting huggydog training
+
+            ┐  ╖
+        ╓╖╬│╡  ││╬╖╖
+    ╓╖╬│││││┘  ╬│││││╬╖
+ ╖╬│││││╬╜        ╙╬│││││╖╖                               ╗╗╗
+ ╬╬╬╬╖││╦╖        ╖╬││╗╣╣╣╬      ╟╣╣╬    ╟╣╣╣             ╜╜╜  ╟╣╣
+ ╬╬╬╬╬╬╬╬╖│╬╖╖╓╬╪│╓╣╣╣╣╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╒╣╣╖╗╣╣╣╗   ╣╣╣ ╣╣╣╣╣╣ ╟╣╣╖   ╣╣╣
+ ╬╬╬╬┐  ╙╬╬╬╬│╓╣╣╣╝╜  ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╣╙ ╙╣╣╣  ╣╣╣ ╙╟╣╣╜╙  ╫╣╣  ╟╣╣
+ ╬╬╬╬┐     ╙╬╬╣╣      ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣     ╣╣╣┌╣╣╜
+ ╬╬╬╜       ╬╬╣╣      ╙╝╣╣╬      ╙╣╣╣╗╖╓╗╣╣╣╜ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣╦╓    ╣╣╣╣╣
+ ╙   ╓╦╖    ╬╬╣╣   ╓╗╗╖            ╙╝╣╣╣╣╝╜   ╘╝╝╜   ╝╝╝  ╝╝╝   ╙╣╣╣    ╟╣╣╣
+   ╩╬╬╬╬╬╬╦╦╬╬╣╣╗╣╣╣╣╣╣╣╝                                             ╫╣╣╣╣
+      ╙╬╬╬╬╬╬╬╣╣╣╣╣╣╝╜
+          ╙╬╬╬╣╣╣╜
+             ╙
+        
+ Version information:
+  ml-agents: 0.30.0,
+  ml-agents-envs: 0.30.0,
+  Communicator API: 1.5.0,
+  PyTorch: 1.11.0+cu102
+[WARNING] The --train option has been deprecated. Train mode is now the default. Use --inference to run in inference mode.
+[INFO] Connected to Unity environment with package version 2.2.1-exp.1 and communication version 1.5.0
+[INFO] Connected new brain: Huggy?team=0
+Traceback (most recent call last):
+  File "/home/alejandrolopezcordero01/miniconda3/envs/huggy-rl/bin/mlagents-learn", line 6, in <module>
+    sys.exit(main())
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/learn.py", line 264, in main
+    run_cli(parse_command_line())
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/learn.py", line 260, in run_cli
+    run_training(run_seed, options, num_areas)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/learn.py", line 136, in run_training
+    tc.start_learning(env_manager)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents-envs/mlagents_envs/timers.py", line 305, in wrapped
+    return func(*args, **kwargs)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/trainer_controller.py", line 172, in start_learning
+    self._reset_env(env_manager)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents-envs/mlagents_envs/timers.py", line 305, in wrapped
+    return func(*args, **kwargs)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/trainer_controller.py", line 107, in _reset_env
+    self._register_new_behaviors(env_manager, env_manager.first_step_infos)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/trainer_controller.py", line 267, in _register_new_behaviors
+    self._create_trainers_and_managers(env_manager, new_behavior_ids)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/trainer_controller.py", line 165, in _create_trainers_and_managers
+    self._create_trainer_and_manager(env_manager, behavior_id)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/trainer_controller.py", line 125, in _create_trainer_and_manager
+    trainer = self.trainer_factory.generate(brain_name)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/trainer/trainer_factory.py", line 57, in generate
+    trainer_settings = self.trainer_config[behavior_name]
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/settings.py", line 732, in __missing__
+    raise TrainerConfigError(
+mlagents.trainers.exception.TrainerConfigError: The behavior name Huggy has not been specified in the trainer configuration. Please add an entry in the configuration file for Huggy, or set default_settings.
+training finished

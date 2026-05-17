@@ -1,0 +1,26 @@
+CUDA_VISIBLE_DEVICES: 0
+Python
+/home/alejandrolopezcordero01/miniconda3/envs/huggy-rl/bin/python
+Python 3.10.7
+go into the ml-agents folder
+Starting huggydog training
+Traceback (most recent call last):
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/cli_utils.py", line 306, in load_config
+    with open(config_path) as data_file:
+FileNotFoundError: [Errno 2] No such file or directory: './config/ppo/Huggy.yaml'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alejandrolopezcordero01/miniconda3/envs/huggy-rl/bin/mlagents-learn", line 6, in <module>
+    sys.exit(main())
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/learn.py", line 264, in main
+    run_cli(parse_command_line())
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/learn.py", line 56, in parse_command_line
+    return RunOptions.from_argparse(args)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/settings.py", line 899, in from_argparse
+    configured_dict.update(load_config(config_path))
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/cli_utils.py", line 310, in load_config
+    raise TrainerConfigError(f"Config file could not be found at {abs_path}.")
+mlagents.trainers.exception.TrainerConfigError: Config file could not be found at /home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/config/ppo/Huggy.yaml.
+training finished

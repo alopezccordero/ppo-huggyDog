@@ -24,9 +24,10 @@ echo "Starting huggydog training"
 
 mlagents-learn ./config/ppo/Huggy.yaml \
     --env=./trained-envs-executables/linux/Huggy/Huggy \
-    --run-id=huggy-ppo-run-1 \
+    --run-id=huggy-ppo-run-2 \
     --train \
-    --no-graphics
+    --no-graphics \
+    --force
 
 echo "training finished"
 conda deactivate

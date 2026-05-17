@@ -1,0 +1,114 @@
+CUDA_VISIBLE_DEVICES: 0
+Python
+/home/alejandrolopezcordero01/miniconda3/envs/huggy-rl/bin/python
+Python 3.10.7
+go into the ml-agents folder
+Starting huggydog training
+
+            ┐  ╖
+        ╓╖╬│╡  ││╬╖╖
+    ╓╖╬│││││┘  ╬│││││╬╖
+ ╖╬│││││╬╜        ╙╬│││││╖╖                               ╗╗╗
+ ╬╬╬╬╖││╦╖        ╖╬││╗╣╣╣╬      ╟╣╣╬    ╟╣╣╣             ╜╜╜  ╟╣╣
+ ╬╬╬╬╬╬╬╬╖│╬╖╖╓╬╪│╓╣╣╣╣╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╒╣╣╖╗╣╣╣╗   ╣╣╣ ╣╣╣╣╣╣ ╟╣╣╖   ╣╣╣
+ ╬╬╬╬┐  ╙╬╬╬╬│╓╣╣╣╝╜  ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╣╙ ╙╣╣╣  ╣╣╣ ╙╟╣╣╜╙  ╫╣╣  ╟╣╣
+ ╬╬╬╬┐     ╙╬╬╣╣      ╫╣╣╣╬      ╟╣╣╬    ╟╣╣╣ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣     ╣╣╣┌╣╣╜
+ ╬╬╬╜       ╬╬╣╣      ╙╝╣╣╬      ╙╣╣╣╗╖╓╗╣╣╣╜ ╟╣╣╬   ╣╣╣  ╣╣╣  ╟╣╣╦╓    ╣╣╣╣╣
+ ╙   ╓╦╖    ╬╬╣╣   ╓╗╗╖            ╙╝╣╣╣╣╝╜   ╘╝╝╜   ╝╝╝  ╝╝╝   ╙╣╣╣    ╟╣╣╣
+   ╩╬╬╬╬╬╬╦╦╬╬╣╣╗╣╣╣╣╣╣╣╝                                             ╫╣╣╣╣
+      ╙╬╬╬╬╬╬╬╣╣╣╣╣╣╝╜
+          ╙╬╬╬╣╣╣╜
+             ╙
+        
+ Version information:
+  ml-agents: 0.30.0,
+  ml-agents-envs: 0.30.0,
+  Communicator API: 1.5.0,
+  PyTorch: 1.11.0+cu102
+[WARNING] The --train option has been deprecated. Train mode is now the default. Use --inference to run in inference mode.
+[INFO] Connected to Unity environment with package version 2.2.1-exp.1 and communication version 1.5.0
+[INFO] Connected new brain: Huggy?team=0
+[WARNING] Deleting TensorBoard data events.out.tfevents.1779007492.gpu009.38743.0 that was left over from a previous run.
+[INFO] Hyperparameters for behavior name Huggy: 
+	trainer_type:	ppo
+	hyperparameters:	
+	  batch_size:	2048
+	  buffer_size:	20480
+	  learning_rate:	0.0003
+	  beta:	0.005
+	  epsilon:	0.2
+	  lambd:	0.95
+	  num_epoch:	3
+	  shared_critic:	False
+	  learning_rate_schedule:	linear
+	  beta_schedule:	linear
+	  epsilon_schedule:	linear
+	network_settings:	
+	  normalize:	True
+	  hidden_units:	512
+	  num_layers:	3
+	  vis_encode_type:	simple
+	  memory:	None
+	  goal_conditioning_type:	hyper
+	  deterministic:	False
+	reward_signals:	
+	  extrinsic:	
+	    gamma:	0.995
+	    strength:	1.0
+	    network_settings:	
+	      normalize:	False
+	      hidden_units:	128
+	      num_layers:	2
+	      vis_encode_type:	simple
+	      memory:	None
+	      goal_conditioning_type:	hyper
+	      deterministic:	False
+	init_path:	None
+	keep_checkpoints:	5
+	checkpoint_interval:	500000
+	max_steps:	10000000
+	time_horizon:	1000
+	summary_freq:	30000
+	threaded:	False
+	self_play:	None
+	behavioral_cloning:	None
+/home/alejandrolopezcordero01/miniconda3/envs/huggy-rl/lib/python3.10/site-packages/torch/cuda/__init__.py:145: UserWarning: 
+NVIDIA A30 with CUDA capability sm_80 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_70.
+If you want to use the NVIDIA A30 GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(incompatible_device_warn.format(device_name, capability, " ".join(arch_list), device_name))
+[WARNING] Trainer has no policies, not saving anything.
+Traceback (most recent call last):
+  File "/home/alejandrolopezcordero01/miniconda3/envs/huggy-rl/bin/mlagents-learn", line 6, in <module>
+    sys.exit(main())
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/learn.py", line 264, in main
+    run_cli(parse_command_line())
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/learn.py", line 260, in run_cli
+    run_training(run_seed, options, num_areas)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/learn.py", line 136, in run_training
+    tc.start_learning(env_manager)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents-envs/mlagents_envs/timers.py", line 305, in wrapped
+    return func(*args, **kwargs)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/trainer_controller.py", line 172, in start_learning
+    self._reset_env(env_manager)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents-envs/mlagents_envs/timers.py", line 305, in wrapped
+    return func(*args, **kwargs)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/trainer_controller.py", line 107, in _reset_env
+    self._register_new_behaviors(env_manager, env_manager.first_step_infos)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/trainer_controller.py", line 267, in _register_new_behaviors
+    self._create_trainers_and_managers(env_manager, new_behavior_ids)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/trainer_controller.py", line 165, in _create_trainers_and_managers
+    self._create_trainer_and_manager(env_manager, behavior_id)
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/trainer_controller.py", line 137, in _create_trainer_and_manager
+    policy = trainer.create_policy(
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/ppo/trainer.py", line 194, in create_policy
+    policy = TorchPolicy(
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/policy/torch_policy.py", line 41, in __init__
+    GlobalSteps()
+  File "/home/alejandrolopezcordero01/ppo-huggyDog/ml-agents/ml-agents/mlagents/trainers/torch_entities/networks.py", line 748, in __init__
+    torch.Tensor([0]).to(torch.int64), requires_grad=False
+RuntimeError: CUDA error: no kernel image is available for execution on the device
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+training finished
