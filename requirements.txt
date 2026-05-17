@@ -1,7 +1,7 @@
 torch==1.11.0
 mlagents==0.30.0
 mlagents-envs==0.30.0
-gym==0.21.0
+gym==0.23.1
 huggingface_hub
 huggingface_sb3
 tensorboard
